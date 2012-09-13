@@ -1,0 +1,223 @@
+/*
+h1
+{
+	font-size: 1.3em;
+}
+table
+{
+	margin: 10px 50px;
+	width: 300px;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+}
+thead
+{
+	background: bisque;
+}
+tfoot
+{
+	background: khaki;
+	text-align: center;
+}
+td, th
+{
+	border: 1px solid gray;
+}
+pre
+{
+	background-color: LemonChiffon;
+	border: 1px solid gray;
+}
+div.title
+{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+div.link
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+div.clear
+{
+	clear: both;
+}
+*/
+
+/*NO DESBLOQUEAR
+div.exa
+{
+	background-color: ivory;
+	/*background: 0; //for ie*/
+	/*border: 1px solid gray;
+	padding: 0 15px;
+	margin-bottom: 20px;
+}
+*/
+
+/*MULTICOLUMNAS LI
+ul{
+  width:760px;
+  margin-bottom:20px;
+  overflow:hidden;
+  border-top:1px solid #ccc;
+}
+li{
+  line-height:1.5em;
+  border-bottom:1px solid #ccc;
+  float:left;
+  display:inline;
+}
+
+.dos_columnas li { width:50%;}
+.tres_columnas li { width:33.333%; }
+.cuatro_columnas li { width:25%; }
+.cinco_columnas li { width:16.666%; }
+
+*/
+
+
+
+
+div.target
+{
+	/*margin: 20px 0 0 400px;*/
+	width: 520px;
+	background-color:#FFF;
+}
+
+
+div.target ul
+{
+	width:520px;  
+  overflow:hidden;
+ /* border-top:1px solid #ccc;*/
+  
+  
+	/*border: 1px solid gray;*/
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color:#FFF;
+}
+
+
+
+
+
+div.target li
+{
+  line-height:1.5em;
+  border-bottom:1px solid #ccc;
+  float:left;
+  display:inline;
+  
+
+  
+  
+	background-repeat: no-repeat;
+	padding-left:20px;	
+	cursor: pointer;
+}
+
+
+
+
+li.simpleon
+{
+	
+	width:25%;
+	margin-left:18px;
+	
+	color: green;
+	font-weight: bold;
+	background: url(tick.png) 0 50%;
+}
+li.simpleoff
+{
+	width:25%;
+	margin-left:18px;
+	
+	color: red;
+	font-weight: bold;
+	background: url(cross.png) 0 50%;
+}
+
+
+/*
+
+li.advon
+{
+	background: url(tick.png) 0 50%;
+	float:left;
+}
+li.advoff
+{
+	background: url(cross.png) 0 50%;
+	float:left;
+}
+
+
+
+#targetall
+{
+	
+	list-style: none;
+	background-color: #eee;
+	
+	
+}
+#targetall li
+{
+	background-repeat: no-repeat;
+	padding-left: 20px;
+	
+}
+
+
+
+
+*/
+
+
+
+
+	
+		
+	
+
+/*
+
+#thSelectColumn div.cmDiv
+{
+	display: inline;
+	background: none;
+	border: 0;
+}
+#thSelectColumn li.main
+{
+	padding: 0;
+	background: none;
+	width: 100%;
+	text-align: right;
+}
+#thSelectColumn li.main li
+{
+	text-align: left;
+	padding-right: 2px;
+}
+#thSelectColumn
+{
+	padding-right: 2px;
+	width: 10px;
+}
+
+
+#ulSelectColumn
+{
+	vertical-align: middle;
+}
+*/

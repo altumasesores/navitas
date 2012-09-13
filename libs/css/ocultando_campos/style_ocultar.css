@@ -1,0 +1,199 @@
+/*h1
+{
+	font-size: 1.3em;
+}
+table
+{
+	margin: 10px 50px;
+	width: 300px;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	border-spacing: 0;
+	float: left;
+}
+thead
+{
+	background: bisque;
+}
+tfoot
+{
+	background: khaki;
+	text-align: center;
+}
+td, th
+{
+	border: 1px solid gray;
+}
+pre
+{
+	background-color: LemonChiffon;
+	border: 1px solid gray;
+}
+div.title
+{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+div.link
+{
+	text-align: center;
+	margin-bottom: 20px;
+}
+div.clear
+{
+	clear: both;
+}
+*/
+/*
+div.exa
+{
+	
+	background-color: ivory;
+	//background: 0; /*for ie*/
+	/*border: 1px solid gray;
+	padding: 0 15px;
+	margin-bottom: 20px;
+	
+	overflow:scroll;
+	
+}
+
+*/
+
+
+
+
+div#exa{
+	height:300px;
+	overflow:auto;
+	
+	}
+
+/*MULTICOLUMNAS LI*/
+
+
+/*
+.dos_columnas li { width:50%;}
+.tres_columnas li { width:33.333%; }
+.cuatro_columnas li { width:25%; }
+.cinco_columnas li { width:16.666%; }
+*/
+
+
+
+
+
+
+
+div.target
+{
+	margin: 0 0 0 0;
+	width: 100%;
+	height:100%;
+	
+}
+div.target ul
+{
+	margin: 0;
+	padding: 0;
+	width:92%;
+	
+	
+	/*border: 1px solid gray;*/
+	
+
+	
+}
+div.target li
+{
+	margin: 0;
+	padding: 0 0 0 20px;
+	
+	
+	background-color:#CFD7DD;
+	 float:left;
+	 text-align:left;
+  display:inline;
+ 
+  width:100%;
+  
+
+	
+	cursor: pointer;
+	
+	
+}
+
+/*
+li.simpleon
+{
+	color: green;
+	font-weight: bold;
+}
+li.simpleoff
+{
+	color: red;
+	font-weight: bold;
+}
+*/
+li.advon
+{
+	color: green;
+	font-weight: bold;
+	background: url(tick.png) 0 50%;
+}
+li.advoff
+{
+	color: red;
+	font-weight: bold;
+	background: url(cross.png) 0 50%;
+}
+#targetall
+{
+	list-style: none;
+	
+}
+
+.bordered .odd{
+	
+	background-color:#EAF7FF;
+}
+
+
+
+#targetall li
+{
+	background-repeat: no-repeat;
+	
+}
+
+/*
+#thSelectColumn div.cmDiv
+{
+	display: inline;
+	background: none;
+	border: 0;
+}
+#thSelectColumn li.main
+{
+	padding: 0;
+	background: none;
+	width: 100%;
+	text-align: right;
+}
+#thSelectColumn li.main li
+{
+	text-align: left;
+	padding-right: 2px;
+}
+#thSelectColumn
+{
+	padding-right: 2px;
+	width: 10px;
+}
+#ulSelectColumn
+{
+	vertical-align: middle;
+}
+*/

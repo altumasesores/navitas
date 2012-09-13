@@ -1,0 +1,5 @@
+http://cssglobe.com/lab/tablecloth/
+http://www.tablefixedheader.com/demonstration/
+http://www.keyframesandcode.com/resources/javascript/jQuery/demos/highlight-demo.html
+http://css-tricks.com/examples/RowColumnHighlighting/example-three.php
+http://p.sohei.org/jquery-plugins/tablehover/

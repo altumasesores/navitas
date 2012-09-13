@@ -1,0 +1,2 @@
+#tooltip {position:absolute; left:-300px; width:300px; border:1px solid #000; padding:4px 6px; background-color:#FFC; visibility:hidden; z-index:998; text-align:left;}
+#tooltip-arrow {position:absolute; left:-300px; z-index:999; visibility:hidden;}

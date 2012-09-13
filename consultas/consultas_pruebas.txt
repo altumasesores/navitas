@@ -1,0 +1,79 @@
+select percepciones,deducciones,percepciones-deducciones as neto_fiscal from(
+select
+(
+p_total_sueldo+
+p_subtotal_domingos+
+p_subtotal_vacaciones+
+p_total_turnos_trabajados+
+p_total_descansos_trabajados+
+p_total_horas_extras+
+p_total_dias_festivos+
+p_aguinaldo+
+p_premio_por_puntualidad+
+p_premio_por_asistencia+
+p_despensa+	
+p_becas_educacionales+
+p_subsidio_empleo
+)as percepciones,
+
+(
+d_infonavit+
+d_IMSS+
+d_ISR +
+d_prestamos+
+d_caja_ahorro+
+d_total_otras_deducciones+
+d_fonacot
+)
+as deducciones
+from
+nomina_fiscal
+where id_nomina='428' 
+) as f									  
+			
+
+
+
+
+----------------------------------------------------------------------
+select percepciones,deducciones,percepciones-deducciones as neto_normal from (select
+									  (
+                    total_sueldo+									  
+									  total_domingos_trabajados+	
+									  total_vacaciones+ 	
+									  total_turnos_trabajados+ 	
+									  total_descanso_trabajado+
+									  total_horas_extras+
+									  otras_percepciones+ 
+									  complemento_sueldo+ 	
+									  total_dias_festivos+
+									  subsidio_empleo+ 
+									  aguinaldo
+                    )as percepciones,
+									 
+									  (
+                    infonavit+
+									  imss+
+									  isr+
+									  prestamos+
+									  caja_ahorro+
+									  otras_deducciones+
+									  fonacot+
+									  prestamo_ascon 
+									  ) as deducciones                                      
+									  
+									  from 
+									  percepciones_empleado pe inner join deducciones_empleado de 
+									  on pe.id_empleado=de.id_empleado 
+									  and 
+									  pe.id_nomina=de.id_nomina
+									  
+									  where
+									  pe.id_nomina='428') as n
+-----------------------------------------------------------------------------------------
+
+
+select total_ReciboNomina,total_nomina_fiscal 
+from percepciones_empleado pe inner join nomina_fiscal nf on  pe.id_nomina=nf.id_nomina
+and pe.id_empleado=nf.id_empleado
+where pe.id_nomina=428;

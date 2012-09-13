@@ -1,0 +1,467 @@
+﻿@charset "utf-8";
+body  {
+	cursor: default;
+	text-align: right;
+	font-family: calibri, arial, sans-serif;
+	font-size: 13px;
+	padding: 5px;
+	background-color:#EAF4F6;
+	margin: 0; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+	width:auto%;
+	float: none;
+}
+
+/* Sugerencias para diseños elásticos 
+1. Dado que el tamaño global de los diseños elásticos se basa en el tamaño de fuente predeterminado del usuario, resultan algo más impredecibles. Si se utilizan correctamente, también son más accesibles para aquellas personas que necesitan tamaños de fuentes más grandes, dado que la longitud de línea mantiene la proporcionalidad.
+2. La asignación de tamaño a los divs en este diseño se basa en el 100% del tamaño de fuente en el elemento body. Si reduce el tamaño global del texto empleando font-size: 80% en el elemento body o el #container, recuerde que todo el diseño reducirá su tamaño proporcionalmente. Es posible que le interese aumentar los anchos de los diversos divs para compensar este efecto.
+3. Si la asignación de tamaño de fuente se modifica de forma distinta en cada div en lugar de hacerse en el diseño global (es decir: a #sidebar1 se le asigna un 70% de tamaño de fuente y a #mainContent se le asigna un 85% de tamaño de fuente), ello hará que se modifique proporcionalmente el tamaño global de cada uno de los divs. Si lo desea, puede realizar el ajuste basándose en la asignación de tamaño de fuente final.
+*/
+
+div#cuerpo{
+	text-align:left;	
+	}
+.twoColElsLtHdr #container {
+	width:100%;  /* este ancho creará un contenedor que cabrá en una ventana de navegador 800px si el texto se deja con los tamaños de fuente predeterminados del navegador */
+	background: #FFFFFF; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+	border: 1px solid #000000;
+	text-align: right; /* esto anula text-align: center en el elemento body. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	
+} 
+.twoColElsLtHdr #header { 
+	background:url(../../../imagenes/bgbanner.jpg);
+	width:auto;	
+	height:100px;
+	
+} 
+
+#altum{	
+	color:#FFF;
+	}
+#altum a{	
+	color:#009;
+	}
+
+#logo{
+	padding-left:20px;
+	float:left;
+	}
+	
+#usuario{
+	float:right;
+	padding-top:10px;
+	padding-left:20px;
+	margin-right:50px;
+	margin-top:25px;
+	background:url(../../../imagenes/usuarios.png);
+	height:25px;
+	width:205px;
+	text-align:left;
+	color:#000;
+	stress:inherit;
+	font-size:14px;
+	
+	}	
+#usuario a{
+	color:#000;		
+	}
+
+#tooltip {position:absolute; left:-300px; width:300px; border:1px solid #000; padding:4px 6px; background-color:#FFC; visibility:hidden; z-index:998; text-align:left;}
+#tooltip-arrow {position:absolute; left:-300px; z-index:999; visibility:hidden;}
+
+	
+	
+	
+.twoColElsLtHdr #header h1 {
+	margin: 0; /* el ajuste en cero del margen del último elemento del div de #header evita la contracción del margen (un espacio inexplicable entre divs). Si el div tiene un borde alrededor, esto no es necesario, ya que también evita la contracción del margen */
+	padding: 10px 0; /* el uso de relleno en lugar de margen le permitirá mantener el elemento alejado de los bordes del div */
+}
+
+/* Sugerencias para sidebar1:
+1. Tenga en cuenta que, si establece un valor de tamaño de fuente en este div, el ancho global del div se ajustará en función de éste.
+2. Dado que está trabajando en ems, es conveniente no utilizar relleno en la barra lateral propiamente dicha. Se añadirá al ancho en el caso de navegadores que cumplen los estándares, creando un ancho real desconocido. 
+3. El espacio entre el lado del div y los elementos que contiene puede crearse colocando un margen izquierdo y derecho en dichos elementos, como se observa en la regla ".twoColElsLtHdr #sidebar1 p".
+*/
+.twoColElsLtHdr #sidebar1 {
+	float: left;
+	background:url(../../../imagenes/bgmenu.jpg) no-repeat top;
+	background-color:#EAF4F6;
+	height: 600px;
+	width: 210px; /* dado que este elemento es flotante, debe asignarse un ancho */
+	padding: 15px 0; /* el relleno superior e inferior crea un espacio visual dentro de este div */
+}
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px; /* deben asignarse los márgenes izquierdo y derecho de cada elemento que vaya a colocarse en las columnas laterales */
+	margin-right: 10px;
+}
+
+/* Sugerencias para mainContent:
+1. Si asigna a este div #mainContent un valor de tamaño de fuente distinto del que tiene el div #sidebar1, los márgenes del div #mainContent se basarán en su tamaño de fuente y el ancho del div #sidebar1 se basará en su tamaño de fuente. Puede que le interese ajustar los valores de estos divs.
+2. El espacio entre el mainContent y sidebar1 se crea con el margen izquierdo del div mainContent.  Con independencia de la cantidad de contenido que incluya el div sidebar1, permanecerá el espacio de la columna. Puede quitar el margen izquierdo si desea que el texto del div #mainContent llene el espacio de #sidebar1 cuando termine el contenido de #sidebar1.
+3. Para evitar la caída de un elemento flotante, puede que tenga que realizar pruebas con el fin de determinar el tamaño máximo aproximado de la imagen/el elemento, ya que este diseño se basa en el tamaño de fuente del usuario combinado con los valores que usted establezca. Sin embargo, si el usuario tiene configurado un tamaño de fuente inferior al normal, habrá menos espacio disponible en el div #mainContent del que observará al realizar la prueba.
+4. En el siguiente comentario condicional de Internet Explorer, la propiedad zoom se utiliza para asignar a mainContent "hasLayout." Esto evita que se produzcan diversos problemas específicos de IE.
+*/
+.twoColElsLtHdr #mainContent {
+	background-color:#FFF;
+	margin-right: 2em;
+	padding-left:1px;
+	text-align: left;
+	width:auto;
+	overflow:auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 2em;
+	 /*el div se ajustara a su contenido*/
+	
+} 
+.twoColElsLtHdr #footer { 
+	padding: 0 10px; /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen por encima de él. */
+	background:#006;
+	color:#FFF; 
+	height:50px;
+	width:auto;
+} 
+
+.twoColElsLtHdr #footer a { 
+	
+	color:#FFF; 
+	
+} 
+
+
+.twoColElsLtHdr #footer p {
+	margin: 0; /* el ajuste en cero de los márgenes del primer elemento del pie evitará que puedan contraerse los márgenes (un espacio entre divs) */
+	padding: 10px 0; /* el relleno de este elemento creará espacio, de la misma forma que lo haría el margen, sin el problema de la contracción de márgenes */
+}
+
+/* Varias clases diversas para su reutilización */
+.fltrt { /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* esta clase debe colocarse en un elemento div o break y debe ser el último elemento antes del cierre de un contenedor que incluya completamente a un elemento flotante */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+table th {
+		vertical-align: top;
+	}
+	
+input {
+		text-align: center;
+		font-family: calibri, arial, sans-serif;
+		font-size: 13px;
+		background-color: white;
+		border: 1px solid;
+		border-color: #abadb3 #dbdfe6 #e3e9ef #e2e3ea;
+		padding: 2px;
+	}
+	input:focus, input:hover  {
+		border-color: #5794bf #b7d5ea #c7e2f1 #c5daed;
+	}
+
+	.pickerImg {
+		position: absolute;
+		margin-left: -16px;
+		margin-top: 5px;
+		cursor: pointer;
+	}
+	.infoBox {
+		background-color: #fefdec;
+		border: 1px solid #edebcd;
+		padding: 6px;
+		margin-bottom: 20px;
+	}
+
+
+.flotante {
+  background:#FFF;
+  border: solid 1px black;
+
+  padding: 5px;
+  width:300px;
+  height:100px;
+  position:relative;
+}
+
+
+div.root {
+	
+	width:500px;
+	height:200px;	
+	
+		background-color:#FFF;
+		
+	
+		
+		
+		
+		
+
+				
+		}
+ 
+
+		
+	
+ 
+
+ul li{
+list-style:none;
+}
+
+
+
+/*CSS PARA LAS TABLAS DENOMINAS DE CLIENTES Y ADMIN*/
+
+/*TABLAS VENTANAS EMERGENTES*/
+
+div.contenedor{
+	 position: absolute;
+	
+                left: 50%;
+                top: 50%;
+				
+                width: 500px;
+                height:200px;
+                margin-top: -100px;
+                margin-left: -250px;
+				background-color:#FFF;
+				
+				
+				
+ 
+                overflow: auto;
+              
+	}
+div.tabla
+{
+   /*clear: none;
+   overflow: hidden;
+   width:500px;
+   margin:10 0 0 0;
+   */
+    position: absolute;
+	
+                left: 50%;
+                top: 50%;
+				
+                width: 310px;
+                height:100px;
+                margin-top: -50px;
+                margin-left: -155px;
+				
+				
+ 
+                overflow: auto;
+              
+   
+   
+   
+     
+  
+}
+div.fila
+{
+	
+	
+	 
+     clear: both;
+               
+	  
+}
+
+div.columna
+{
+   float: left;
+   padding: 5px;
+   border-style: solid;
+   border-right-width: 1px;
+   border-left-width: 1px;
+   border-top-width: 1px;
+   border-bottom-width: 1px;  
+   height:20px;
+   font-size:12px;
+   font-family:Arial, Helvetica, sans-serif;
+   color:#000000; 
+  
+}
+
+h1.emergente{
+	color:#000000; 
+	}
+	
+
+
+	
+div.tablaDomingos
+{
+   /*clear: none;
+   overflow: hidden;
+   width:500px;
+   margin:10 0 0 0;
+   */
+    position: absolute;
+	
+                left: 50%;
+                top: 50%;
+				
+                width: 380px;
+                height:100px;
+                margin-top: -50px;
+                margin-left: -190px;
+				
+				
+ 
+                overflow: auto;
+              
+   
+   
+   
+     
+  
+}
+
+
+
+
+
+/******************************************************************************************************************************************************************/
+/*
+BLOQUE CSS DESTINADO A DARLE FORMATO A LAS TABLAS DE DATOS DE LAS NOMINAS
+*/
+/******************************************************************************************************************************************************************/
+
+
+
+.bordered {
+    border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+	 
+	
+	   
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+/*.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}*/
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+
+
+
+
+/***************************/
+.bordered td, .bordered th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+ 
+.bordered tbody tr:nth-child(2n) {
+    background: #f5f5f5;
+        
+}
+
+.bordered tr:hover {
+    background:#84A9E6;  
+} 
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+
+

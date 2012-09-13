@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+#jquery-loader{
+	
+	padding-top:35px;
+	background-color: white;
+	text-align: center;
+}
+#jquery-loader-background{background-color: silver}
+#jquery-loader.blue-with-image{
+	
+	padding-top:35px;
+	background-color: white;
+	text-align: center;
+	background-image: url(../../../imagenes/loader/ajax-loader.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#jquery-loader.blue-with-image-2{
+	
+	padding-top:35px;
+	background-color: transparent;
+	text-align: center;
+	background-image: url(../../../imagenes/loader/ajax-loader.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
