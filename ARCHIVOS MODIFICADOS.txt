@@ -1,0 +1,25 @@
+ARCHIVOS MODIFICADOS PARA SUBIR A FTP:
+
+navitas/index.php
+
+connections/navitas_connect.php
+
+administrador/mod_nominas/model/ModelNominaAdmin.php
+
+administrador/mod_nominas/view/reporteNominasFiscalesEmpleados.php
+
+administrador/mod_nominas/controller/NominaAdminController.php
+
+admin/mod_calculos/controller/CalculosController.php
+
+clients/index.php
+
+
+
+
+
+
+
+
+
+
